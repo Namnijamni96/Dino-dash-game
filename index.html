@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Dino Dash</h1>
+    <div id="menuBar">
+        <select id="speedSelect" onchange="setGameSpeed(this.value)">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+            <option value="extreme">Extreme</option>
+        </select>
+        <select id="sensitivitySelect" onchange="setSensitivity(this.value)">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+        </select>
+        <select id="fpsSelect" onchange="setFPS(this.value)">
+            <option value="30">30</option>
+            <option value="40" selected>40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+            <option value="90">90</option>
+        </select>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+    <div id="darkModeNotification">Dark mode enabled</div>
+    <div id="loadingScreen">
+        <div id="loadingText">Loading... 0%</div>
+        <div id="loadingBar"></div>
+    </div>
+    <div id="scoreboard">
+        Score: <span id="currentScore">0</span> | High Score: <span id="highScore">0</span>
+    </div>
+    <canvas id="canvas" width="800" height="200"></canvas>
+    <div id="creator"></div>
+    <script src="script.js"></script>
+</body>
+</html>
